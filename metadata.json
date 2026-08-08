@@ -1,0 +1,8 @@
+{
+  "name": "Luxivo - Hero Clone",
+  "description": "Ditto clone of the Luxivo high-performance vehicle tuning hero section with dynamic data fetching, reactive UI, and smooth motion transitions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": [
+    "MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"
+  ]
+}

@@ -1,0 +1,182 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    background-color: #050505;
+    color: #f3f3f3;
+    font-family: "Satoshi", "Geist", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+    overflow-x: hidden;
+    user-select: none;
+    -webkit-font-smoothing: antialiased;
+  }
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+::-webkit-scrollbar-track {
+  background: #050505;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.15);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 255, 255, 0.3);
+}
+
+/* Headlight Breathing Glow */
+@keyframes headlightPulse {
+  0%, 100% {
+    opacity: 0.3;
+    filter: drop-shadow(0 0 12px rgba(255, 255, 255, 0.4));
+  }
+  50% {
+    opacity: 0.9;
+    filter: drop-shadow(0 0 32px rgba(255, 255, 255, 0.95)) drop-shadow(0 0 60px rgba(255, 255, 255, 0.6));
+  }
+}
+
+/* Wheel Light Sweep */
+@keyframes lightSweep {
+  0% {
+    transform: translateX(-100%) rotate(25deg);
+    opacity: 0;
+  }
+  30% {
+    opacity: 0.4;
+  }
+  60% {
+    opacity: 0.4;
+  }
+  100% {
+    transform: translateX(200%) rotate(25deg);
+    opacity: 0;
+  }
+}
+
+.animate-headlight-glow {
+  animation: headlightPulse 4s ease-in-out infinite;
+}
+
+.animate-light-sweep {
+  animation: lightSweep 6s ease-in-out infinite;
+}
+
+/* Subtle ambient floor reflection */
+.floor-reflection {
+  transform: scaleY(-1);
+  mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, transparent 60%);
+  -webkit-mask-image: linear-gradient(to bottom, rgba(0, 0, 0, 0.35) 0%, transparent 60%);
+  filter: blur(4px) opacity(0.3);
+}
+
+/* Subtle floor shadow glow */
+.car-shadow {
+  background: radial-gradient(ellipse 75% 35% at 50% 60%, rgba(0, 0, 0, 0.98) 0%, rgba(5, 5, 5, 0.8) 50%, transparent 80%);
+}
+
+/* Utility to hide scrollbar in carousel */
+.no-scrollbar::-webkit-scrollbar {
+  display: none;
+}
+.no-scrollbar {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
+/* Custom metallic gold gradient text & utilities */
+.text-gold-gradient {
+  background: linear-gradient(135deg, #FFF0CA 0%, #E6C875 25%, #C9A44C 50%, #9E792D 75%, #F7E4A8 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.text-gold-light {
+  background: linear-gradient(180deg, #FDF3D8 0%, #E0B95B 50%, #B8923A 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+}
+
+.bg-gold-gradient {
+  background: linear-gradient(135deg, #EAD087 0%, #C9A44C 50%, #A37F2C 100%);
+}
+
+.bg-gold-gradient-hover:hover {
+  background: linear-gradient(135deg, #F3DC9B 0%, #DCB75D 50%, #B8923A 100%);
+}
+
+.border-gold-subtle {
+  border-color: rgba(201, 164, 76, 0.35);
+}
+
+.border-gold-bright {
+  border-color: rgba(201, 164, 76, 0.8);
+}
+
+.shadow-gold-glow {
+  box-shadow: 0 0 25px rgba(201, 164, 76, 0.25);
+}
+
+.shadow-gold-btn {
+  box-shadow: 0 4px 20px rgba(201, 164, 76, 0.35);
+}
+
+.gold-glow {
+  box-shadow: 0 0 25px rgba(201, 164, 76, 0.25);
+}
+
+.gold-border-gradient {
+  border-image: linear-gradient(to right, rgba(201, 164, 76, 0.5), rgba(201, 164, 76, 0.1)) 1;
+}
+
+/* Smooth glassmorphic effect */
+.glass-panel {
+  background: rgba(10, 10, 12, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(201, 164, 76, 0.15);
+}
+
+.glass-panel-hover:hover {
+  background: rgba(20, 18, 14, 0.85);
+  border-color: rgba(201, 164, 76, 0.4);
+  box-shadow: 0 8px 24px -6px rgba(201, 164, 76, 0.15);
+}
+
+@keyframes goldShimmer {
+  0% {
+    background-position: -200% 0;
+  }
+  100% {
+    background-position: 200% 0;
+  }
+}
+
+.gold-shimmer-text {
+  background: linear-gradient(90deg, #E5C26B 0%, #FFF4D0 25%, #C9A44C 50%, #FFF4D0 75%, #E5C26B 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: goldShimmer 6s linear infinite;
+}
+
+.gold-card-border {
+  position: relative;
+}
+
+.gold-card-border::before {
+  content: '';
+  position: absolute;
+  inset: 0;
+  border-radius: inherit;
+  padding: 1px;
+  background: linear-gradient(135deg, rgba(201, 164, 76, 0.6) 0%, rgba(201, 164, 76, 0.15) 50%, rgba(201, 164, 76, 0.5) 100%);
+  -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+  -webkit-mask-composite: xor;
+  mask-composite: exclude;
+  pointer-events: none;
+}
