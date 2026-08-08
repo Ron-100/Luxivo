@@ -1,4 +1,5 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
+import { Preloader } from './components/Preloader';
 import { Navbar } from './components/Navbar';
 import { HeroLeft } from './components/HeroLeft';
 import { SpecsCard } from './components/SpecsCard';
@@ -20,6 +21,9 @@ import { DEFAULT_SUPERCAR_PAIR } from './data/images';
 import { VehicleSpec, TimelineFeature, ImageItem, LensConfig } from './types';
 
 export default function App() {
+  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [loadingProgress, setLoadingProgress] = useState<number>(0);
+
   const [selectedVehicle, setSelectedVehicle] = useState<VehicleSpec>(VEHICLE_SPECS[0]);
   const [activeFeatureId, setActiveFeatureId] = useState<string>(TIMELINE_FEATURES[0].id);
 
@@ -33,6 +37,56 @@ export default function App() {
     showCoordinates: false,
     lensShape: 'circle',
   });
+
+  // Preloader Logic: Preload images and track loading progress
+  useEffect(() => {
+    const imagesToPreload = [
+      DEFAULT_SUPERCAR_PAIR.image1.src,
+      DEFAULT_SUPERCAR_PAIR.image2.src,
+      ...VEHICLE_SPECS.map(v => v.imageUrl).filter(Boolean)
+    ];
+
+    let loadedCount = 0;
+    const totalCount = imagesToPreload.length;
+
+    const updateProgress = () => {
+      loadedCount++;
+      const calculatedProgress = Math.min(90, Math.round((loadedCount / totalCount) * 100));
+      setLoadingProgress(calculatedProgress);
+    };
+
+    imagesToPreload.forEach(src => {
+      const img = new Image();
+      img.src = src;
+      img.onload = updateProgress;
+      img.onerror = updateProgress;
+    });
+
+    const handleWindowLoad = () => {
+      setLoadingProgress(100);
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 500);
+    };
+
+    if (document.readyState === 'complete') {
+      handleWindowLoad();
+    } else {
+      window.addEventListener('load', handleWindowLoad);
+      // Fallback timer to prevent getting stuck if any asset hangs
+      const fallbackTimer = setTimeout(() => {
+        setLoadingProgress(100);
+        setTimeout(() => {
+          setIsLoading(false);
+        }, 500);
+      }, 2500);
+
+      return () => {
+        window.removeEventListener('load', handleWindowLoad);
+        clearTimeout(fallbackTimer);
+      };
+    }
+  }, []);
 
   // Toggle image swap (Main <-> Hover reveal)
   const handleSwapImages = () => {
@@ -57,6 +111,9 @@ export default function App() {
 
   return (
     <div className="relative w-full bg-black text-white font-sans selection:bg-white selection:text-black">
+      {/* Car Wheel Preloader overlay until content & assets are fully loaded */}
+      <Preloader progress={loadingProgress} isLoading={isLoading} />
+
       {/* STICKY HERO SECTION (Stays fixed pinned at top while all subsequent sections scroll above it) */}
       <div className="sticky top-0 z-0 h-screen w-full min-h-screen flex flex-col justify-between overflow-hidden">
         {/* Animated Hero Showcase Background Component */}
