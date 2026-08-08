@@ -41,9 +41,9 @@ export default function App() {
   // Preloader Logic: Preload images and track loading progress
   useEffect(() => {
     const imagesToPreload = [
-      DEFAULT_SUPERCAR_PAIR.image1.src,
-      DEFAULT_SUPERCAR_PAIR.image2.src,
-      ...VEHICLE_SPECS.map(v => v.imageUrl).filter(Boolean)
+      DEFAULT_SUPERCAR_PAIR.image1.url,
+      DEFAULT_SUPERCAR_PAIR.image2.url,
+      ...VEHICLE_SPECS.map(v => v.image).filter(Boolean)
     ];
 
     let loadedCount = 0;
