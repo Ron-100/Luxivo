@@ -14,9 +14,9 @@ export const Preloader: React.FC<PreloaderProps> = ({ progress = 0, isLoading })
         isLoading ? 'opacity-100 pointer-events-auto' : 'opacity-0 pointer-events-none'
       }`}
     >
-      {/* Subtle Background Glows */}
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-yellow-500/5 rounded-full blur-[100px] pointer-events-none" />
+      {/* Ambient Gold Glows (Matching Section 4 & Section 5 Style) */}
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[550px] h-[550px] bg-[#C9A44C]/10 rounded-full blur-[140px] pointer-events-none" />
+      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[350px] h-[350px] bg-[#8F6D25]/15 rounded-full blur-[100px] pointer-events-none" />
 
 
       {/* Center Animation Block */}
@@ -31,14 +31,7 @@ export const Preloader: React.FC<PreloaderProps> = ({ progress = 0, isLoading })
             {/* Tire Tread Pattern - Rotates with wheel */}
             <div className="absolute inset-1 rounded-full border-[6px] border-dashed border-zinc-800 animate-[spin_2s_linear_infinite]" />
 
-            {/* Red Brembo / Performance Brake Caliper (Stays Fixed while wheel rotates!) */}
-            <div className="absolute -left-1 top-1/2 -translate-y-1/2 z-20 w-8 h-24 md:w-10 md:h-28 bg-gradient-to-r from-red-700 via-red-600 to-red-800 rounded-l-2xl border-y border-l border-red-400/30 flex flex-col items-center justify-center shadow-[0_0_20px_rgba(220,38,38,0.4)]">
-              <span className="rotate-90 font-mono text-[9px] md:text-[10px] tracking-widest font-black text-white/90 uppercase select-none">
-                LUXIVO
-              </span>
-              <div className="w-1.5 h-1.5 rounded-full bg-zinc-400 my-1 shadow-inner" />
-              <div className="w-1.5 h-1.5 rounded-full bg-zinc-400 my-1 shadow-inner" />
-            </div>
+
 
             {/* Drilled Carbon Ceramic Brake Disc (Rotates slowly or static under wheel) */}
             <div className="absolute inset-5 rounded-full bg-gradient-to-br from-zinc-800 via-zinc-900 to-zinc-950 border border-zinc-700/50 flex items-center justify-center shadow-inner">
@@ -98,16 +91,16 @@ export const Preloader: React.FC<PreloaderProps> = ({ progress = 0, isLoading })
 
         {/* Loading Status Text & Percentage */}
         <div className="mt-8 flex flex-col items-center gap-2">
-          <div className="flex items-center gap-2 font-mono text-sm tracking-[0.25em] text-zinc-300 uppercase">
+          <div className="flex items-center gap-2 font-sans font-black text-sm tracking-[0.25em] text-zinc-300 uppercase">
             <span>STARTING ENGINE</span>
             <span className="flex gap-1">
-              <span className="w-1 h-1 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.3s]" />
-              <span className="w-1 h-1 bg-amber-400 rounded-full animate-bounce [animation-delay:-0.15s]" />
-              <span className="w-1 h-1 bg-amber-400 rounded-full animate-bounce" />
+              <span className="w-1.5 h-1.5 bg-[#C9A44C] rounded-full animate-bounce [animation-delay:-0.3s]" />
+              <span className="w-1.5 h-1.5 bg-[#C9A44C] rounded-full animate-bounce [animation-delay:-0.15s]" />
+              <span className="w-1.5 h-1.5 bg-[#C9A44C] rounded-full animate-bounce" />
             </span>
           </div>
 
-          <div className="font-mono text-3xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-amber-200 via-amber-400 to-yellow-500 tracking-wider">
+          <div className="font-sans text-4xl font-black tracking-tight text-gold-gradient drop-shadow-[0_2px_10px_rgba(201,164,76,0.25)]">
             {Math.round(progress)}%
           </div>
         </div>
@@ -118,12 +111,12 @@ export const Preloader: React.FC<PreloaderProps> = ({ progress = 0, isLoading })
         {/* Progress Bar Container */}
         <div className="w-full h-1.5 bg-zinc-900/90 border border-zinc-800 rounded-full overflow-hidden p-[1px]">
           <div
-            className="h-full bg-gradient-to-r from-red-600 via-amber-500 to-yellow-400 rounded-full transition-all duration-300 ease-out shadow-[0_0_12px_rgba(245,158,11,0.6)]"
+            className="h-full bg-gradient-to-r from-[#C9A44C] via-[#E6C875] to-[#F7E4A8] rounded-full transition-all duration-300 ease-out shadow-[0_0_12px_rgba(201,164,76,0.5)]"
             style={{ width: `${Math.min(100, Math.max(5, progress))}%` }}
           />
         </div>
 
-        <div className="w-full flex justify-between font-mono text-[10px] text-zinc-500 uppercase tracking-widest">
+        <div className="w-full flex justify-between font-sans font-bold text-[11px] text-[#BDBDBD] uppercase tracking-[0.2em]">
           <span>SYSTEM CHECK: OK</span>
           <span>AERODYNAMICS LOADED</span>
         </div>
