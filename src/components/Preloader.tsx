@@ -18,18 +18,6 @@ export const Preloader: React.FC<PreloaderProps> = ({ progress = 0, isLoading })
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[500px] bg-red-600/10 rounded-full blur-[140px] pointer-events-none" />
       <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[300px] h-[300px] bg-yellow-500/5 rounded-full blur-[100px] pointer-events-none" />
 
-      {/* Top Branding Header */}
-      <div className="w-full pt-10 px-8 flex justify-between items-center z-10 max-w-7xl">
-        <div className="flex items-center gap-3">
-          <span className="w-2.5 h-2.5 rounded-full bg-red-500 animate-ping" />
-          <span className="font-mono text-xs tracking-[0.3em] uppercase text-zinc-400">
-            Luxivo // Performance Engineering
-          </span>
-        </div>
-        <div className="font-mono text-xs tracking-widest text-zinc-500 uppercase">
-          Initializing Engine
-        </div>
-      </div>
 
       {/* Center Animation Block */}
       <div className="relative flex flex-col items-center justify-center z-10 py-12">
