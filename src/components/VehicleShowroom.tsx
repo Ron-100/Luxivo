@@ -8,7 +8,7 @@ export const VehicleShowroom: React.FC = () => {
       initial={{ opacity: 0, y: 30 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.9, delay: 0.4, ease: [0.16, 1, 0.3, 1] }}
-      className="relative w-full flex-1 h-full min-h-[300px] rounded-2xl overflow-hidden group border border-[#8F6D25]/30 shadow-2xl bg-[#08080A] flex flex-col"
+      className="relative w-full flex-1 h-full min-h-[300px] rounded-br-[80px] rounded-tl-[80px] overflow-hidden group border border-[#8F6D25]/30 shadow-2xl bg-[#08080A] flex flex-col"
     >
       {/* Background ambient lighting overlay */}
       <div className="absolute inset-0 bg-radial-gradient from-[#C9A44C]/10 via-transparent to-black/80 pointer-events-none z-10" />

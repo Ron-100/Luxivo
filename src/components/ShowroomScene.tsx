@@ -9,7 +9,7 @@ export const ShowroomScene: React.FC = () => {
   const [isHeadlightsOn, setIsHeadlightsOn] = useState(true);
 
   return (
-    <div className="relative w-full h-full min-h-[480px] lg:min-h-[640px] xl:min-h-[720px] rounded-2xl overflow-hidden shadow-2xl border border-[#C9A44C]/20 bg-[#050505] flex items-center justify-center group">
+    <div className="relative w-full h-full min-h-[480px] lg:min-h-[640px] xl:min-h-[720px] rounded-tr-[80px] rounded-bl-[80px] overflow-hidden shadow-2xl border border-[#C9A44C]/20 bg-[#050505] flex items-center justify-center group">
       {/* Showroom Background Image */}
       <motion.img
         src={showroomImagePath}
@@ -49,9 +49,10 @@ export const ShowroomScene: React.FC = () => {
           onClick={() => setSelectedCar(LUXURY_CARS[0])}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="absolute bottom-[22%] right-[28%] z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#E61C24]/60 text-white text-xs font-semibold shadow-[0_0_15px_rgba(230,28,36,0.3)] hover:border-[#E61C24] transition-all cursor-pointer"
+          className="absolute bottom-[22%] right-[28%] z-20 flex items-center gap-2 px-4 py-1.5 rounded-none bg-black/80 border border-[#E61C24]/60 text-white text-xs font-semibold shadow-[0_0_15px_rgba(230,28,36,0.3)] hover:border-[#E61C24] transition-all cursor-pointer"
+          style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
         >
-          <span className="w-2 h-2 rounded-full bg-[#E61C24] animate-ping" />
+          <span className="w-2 h-2 bg-[#E61C24]" />
           <span className="tracking-wider uppercase font-bold text-[11px] text-[#FFA3A6]">Ferrari SF90</span>
         </motion.button>
 
@@ -60,9 +61,10 @@ export const ShowroomScene: React.FC = () => {
           onClick={() => setSelectedCar(LUXURY_CARS[1])}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="absolute bottom-[44%] left-[42%] z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#C9A44C]/60 text-white text-xs font-semibold shadow-[0_0_15px_rgba(201,164,76,0.3)] hover:border-[#DFB756] transition-all cursor-pointer"
+          className="absolute bottom-[44%] left-[42%] z-20 flex items-center gap-2 px-4 py-1.5 rounded-none bg-black/80 border border-[#C9A44C]/60 text-white text-xs font-semibold shadow-[0_0_15px_rgba(201,164,76,0.3)] hover:border-[#DFB756] transition-all cursor-pointer"
+          style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
         >
-          <span className="w-2 h-2 rounded-full bg-[#DFB756]" />
+          <span className="w-2 h-2 bg-[#DFB756]" />
           <span className="tracking-wider uppercase font-bold text-[11px] text-[#FFF0CA]">McLaren 765LT</span>
         </motion.button>
 
@@ -71,15 +73,19 @@ export const ShowroomScene: React.FC = () => {
           onClick={() => setSelectedCar(LUXURY_CARS[2])}
           whileHover={{ scale: 1.1 }}
           whileTap={{ scale: 0.95 }}
-          className="absolute top-[38%] right-[22%] z-20 flex items-center gap-2 px-3 py-1.5 rounded-full bg-black/80 backdrop-blur-md border border-[#104EB2]/60 text-white text-xs font-semibold shadow-[0_0_15px_rgba(16,78,178,0.3)] hover:border-[#3B82F6] transition-all cursor-pointer"
+          className="absolute top-[38%] right-[22%] z-20 flex items-center gap-2 px-4 py-1.5 rounded-none bg-black/80 border border-[#104EB2]/60 text-white text-xs font-semibold shadow-[0_0_15px_rgba(16,78,178,0.3)] hover:border-[#3B82F6] transition-all cursor-pointer"
+          style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
         >
-          <span className="w-2 h-2 rounded-full bg-[#3B82F6]" />
+          <span className="w-2 h-2 bg-[#3B82F6]" />
           <span className="tracking-wider uppercase font-bold text-[11px] text-[#93C5FD]">Porsche Taycan</span>
         </motion.button>
       </div>
 
       {/* Showroom Interactive Control Bar (Bottom Right) */}
-      <div className="absolute bottom-4 right-4 z-20 flex items-center gap-3 px-3 py-1.5 rounded-full bg-black/75 backdrop-blur-md border border-white/10 text-xs text-white/80">
+      <div
+        className="absolute bottom-4 right-4 z-20 flex items-center gap-3 px-4 py-1.5 rounded-none bg-black/75 border border-white/10 text-xs text-white/80"
+        style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
+      >
         <button
           onClick={() => setIsHeadlightsOn(!isHeadlightsOn)}
           className="flex items-center gap-1.5 hover:text-[#DFB756] transition-colors cursor-pointer"

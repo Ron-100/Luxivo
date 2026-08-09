@@ -101,15 +101,16 @@ const FeatureCard: React.FC<CardProps> = ({
       onClick={onClick}
       className={`
         relative group cursor-pointer overflow-hidden
-        rounded-xl transition-all duration-300 select-none
+        rounded-none transition-all duration-300 select-none
         bg-gradient-to-br from-[#0D0D0D] via-[#080808] to-[#040404]
         border ${
           isSelected
             ? 'border-[#C9A44C] shadow-[0_0_20px_rgba(201,164,76,0.3)] bg-[#12100B]'
             : 'border-[#C9A44C]/30 hover:border-[#C9A44C]/80 hover:shadow-[0_0_15px_rgba(201,164,76,0.18)]'
         }
-        p-3.5 sm:p-4 flex items-center space-x-3.5
+        px-6 py-3.5 flex items-center space-x-3.5
       `}
+      style={{ clipPath: isFullWidth ? 'polygon(2% 0, 100% 0%, 98% 100%, 0% 100%)' : 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
     >
       {/* SUBTLE CORNER GOLD ACCENT LIGHT */}
       <div className="absolute -top-12 -left-12 w-24 h-24 bg-[#C9A44C]/10 rounded-full blur-xl pointer-events-none group-hover:bg-[#C9A44C]/25 transition-all duration-500" />

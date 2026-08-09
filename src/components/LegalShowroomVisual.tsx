@@ -32,7 +32,7 @@ export const LegalShowroomVisual: React.FC<LegalShowroomVisualProps> = ({
       initial={{ opacity: 0, scale: 0.98 }}
       animate={{ opacity: 1, scale: 1 }}
       transition={{ duration: 0.8, delay: 0.2, ease: 'easeOut' }}
-      className="relative w-full rounded-2xl overflow-hidden border border-[#C9A44C]/40 bg-[#080808]/60 backdrop-blur-md shadow-[0_15px_50px_rgba(0,0,0,0.85)] group select-none"
+      className="relative w-full overflow-hidden border border-[#C9A44C]/40 bg-[#080808]/60 shadow-[0_15px_50px_rgba(0,0,0,0.85)] group select-none"
     >
       {/* SHOWROOM DISPLAY SCENE FRAME */}
       <div className="relative w-full aspect-[4/3] sm:aspect-[16/10] md:aspect-[16/10] xl:aspect-[16/11] overflow-hidden rounded-2xl">
@@ -64,9 +64,9 @@ export const LegalShowroomVisual: React.FC<LegalShowroomVisualProps> = ({
             initial={{ opacity: 0, x: -10 }}
             animate={{ opacity: 1, x: 0 }}
             transition={{ delay: 0.5 }}
-            className="flex items-center space-x-2 bg-black/80 backdrop-blur-md px-3 py-1.5 rounded-full border border-[#C9A44C]/40 shadow-lg"
+            className="flex items-center space-x-2 bg-black/80 px-4 py-1.5 rounded-none border border-[#C9A44C]/40 shadow-lg"
+            style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
           >
-            <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
             <span className="text-[11px] font-bold tracking-widest text-white uppercase">
               FLEET STATUS: VERIFIED
             </span>
@@ -79,7 +79,8 @@ export const LegalShowroomVisual: React.FC<LegalShowroomVisualProps> = ({
             onClick={onOpenAgreementModal}
             whileHover={{ scale: 1.05 }}
             whileTap={{ scale: 0.95 }}
-            className="flex items-center space-x-1.5 bg-[#14110A]/90 backdrop-blur-md px-3.5 py-1.5 rounded-full border border-[#C9A44C] text-[#C9A44C] text-[11px] font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(201,164,76,0.25)] hover:bg-[#C9A44C] hover:text-black transition-all"
+            className="flex items-center space-x-1.5 bg-[#14110A]/90 px-4 py-1.5 rounded-none border border-[#C9A44C] text-[#C9A44C] text-[11px] font-bold tracking-wider uppercase shadow-[0_0_15px_rgba(201,164,76,0.25)] hover:bg-[#C9A44C] hover:text-black transition-all"
+            style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
           >
             <Maximize2 className="w-3.5 h-3.5" />
             <span>Inspect Agreement</span>
@@ -132,7 +133,8 @@ export const LegalShowroomVisual: React.FC<LegalShowroomVisualProps> = ({
                     animate={{ opacity: 1, y: 0, scale: 1 }}
                     exit={{ opacity: 0, y: 5, scale: 0.95 }}
                     transition={{ duration: 0.2 }}
-                    className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-3 rounded-xl bg-[#0F0E0A]/95 border border-[#C9A44C] text-white shadow-[0_10px_25px_rgba(0,0,0,0.9)] backdrop-blur-md pointer-events-none z-30"
+                    className="absolute left-1/2 -translate-x-1/2 bottom-full mb-2 w-64 p-3 rounded-none bg-[#0F0E0A]/95 border border-[#C9A44C] text-white shadow-[0_10px_25px_rgba(0,0,0,0.9)] pointer-events-none z-30"
+                    style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
                   >
                     <div className="flex items-center space-x-1.5 text-[#C9A44C] text-xs font-bold tracking-wider uppercase mb-1">
                       <Sparkles className="w-3.5 h-3.5" />
@@ -158,7 +160,8 @@ export const LegalShowroomVisual: React.FC<LegalShowroomVisualProps> = ({
           <motion.div
             whileHover={{ scale: 1.02 }}
             onClick={onOpenAgreementModal}
-            className="cursor-pointer bg-black/85 backdrop-blur-md p-3 rounded-xl border border-[#C9A44C]/40 flex items-center space-x-3 shadow-lg hover:border-[#C9A44C] transition-colors max-w-xs"
+            className="cursor-pointer bg-black/85 px-5 py-3 rounded-none border border-[#C9A44C]/40 flex items-center space-x-3 shadow-lg hover:border-[#C9A44C] transition-colors max-w-xs"
+            style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
           >
             <div className="w-9 h-9 rounded-lg bg-[#18140B] border border-[#C9A44C] flex items-center justify-center text-[#C9A44C] flex-shrink-0">
               <FileCheck2 className="w-5 h-5" />
@@ -178,7 +181,8 @@ export const LegalShowroomVisual: React.FC<LegalShowroomVisualProps> = ({
           <motion.div
             whileHover={{ scale: 1.05 }}
             onClick={() => onOpenVerificationModal('insurance')}
-            className="cursor-pointer bg-gradient-to-br from-[#18140B] to-[#0A0A0A] backdrop-blur-md px-3.5 py-2 rounded-xl border border-[#C9A44C] flex items-center space-x-2 shadow-[0_0_15px_rgba(201,164,76,0.3)]"
+            className="cursor-pointer bg-gradient-to-br from-[#18140B] to-[#0A0A0A] px-5 py-2.5 rounded-none border border-[#C9A44C] flex items-center space-x-2 shadow-[0_0_15px_rgba(201,164,76,0.3)]"
+            style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
           >
             <Shield className="w-4 h-4 text-[#C9A44C]" />
             <div className="flex flex-col">

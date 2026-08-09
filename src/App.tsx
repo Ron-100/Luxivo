@@ -16,6 +16,7 @@ import { WhyChooseUs } from './components/WhyChooseUs';
 import { HowItWorksSection } from './components/HowItWorksSection';
 import { LegalVerificationSection } from './components/LegalVerificationSection';
 import { LuxuryCtaSection } from './components/LuxuryCtaSection';
+import { Footer } from './components/Footer';
 import { VEHICLE_SPECS, TIMELINE_FEATURES } from './data/mockData';
 import { DEFAULT_SUPERCAR_PAIR } from './data/images';
 import { VehicleSpec, TimelineFeature, ImageItem, LensConfig } from './types';
@@ -161,12 +162,6 @@ export default function App() {
             </div>
           </div>
         </main>
-
-        {/* Footer copyright tagline */}
-        <footer className="w-full max-w-[1536px] mx-auto px-6 sm:px-12 lg:px-[72px] pb-6 flex items-center justify-between text-xs text-neutral-400 font-mono tracking-wider relative z-10 pointer-events-none">
-          <span>Luxivo® AUTOMOTIVE</span>
-          <span className="hidden sm:inline">HIGH PERFORMANCE TUNING LAB</span>
-        </footer>
       </div>
 
       {/* SCROLLABLE SECTIONS WRAPPER (Sits on higher z-index (z-10) and scrolls smoothly over the pinned sticky hero) */}
@@ -190,6 +185,14 @@ export default function App() {
         <div className="w-full bg-[#030303] py-12 px-4 sm:px-8 border-t border-white/10">
           <LuxuryCtaSection />
         </div>
+
+        {/* 8. Footer Section at the end of page */}
+        <Footer
+          onOpenFAQ={() => setIsFAQModalOpen(true)}
+          onOpenContact={() => setIsContactModalOpen(true)}
+          onOpenAbout={() => setIsAboutModalOpen(true)}
+          onOpenSpecs={() => setIsSpecsModalOpen(true)}
+        />
       </div>
 
       {/* Modals & Overlays */}

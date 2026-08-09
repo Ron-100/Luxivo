@@ -20,7 +20,8 @@ export const BenefitCard: React.FC<BenefitCardProps> = ({ item, index }) => {
         ease: [0.215, 0.61, 0.355, 1],
       }}
       whileHover={{ scale: 1.015, x: 4 }}
-      className="group relative flex items-center gap-4 py-3 px-3.5 rounded-lg border border-[#C9A44C]/20 bg-[#0B0B0C]/80 hover:bg-[#14120C]/90 hover:border-[#C9A44C]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_25px_rgba(201,164,76,0.15)] cursor-pointer backdrop-blur-md"
+      className="group relative flex items-center gap-4 py-3.5 px-7 rounded-none border border-[#C9A44C]/20 bg-[#0B0B0C]/80 hover:bg-[#14120C]/90 hover:border-[#C9A44C]/50 transition-all duration-300 shadow-[0_4px_20px_rgba(0,0,0,0.5)] hover:shadow-[0_4px_25px_rgba(201,164,76,0.15)] cursor-pointer backdrop-blur-md"
+      style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
     >
       {/* Subtle Gold Accent Glow Line on Hover */}
       <div className="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-0 group-hover:h-3/4 bg-gradient-to-b from-[#FFF0CA] via-[#C9A44C] to-transparent transition-all duration-300 rounded-r" />

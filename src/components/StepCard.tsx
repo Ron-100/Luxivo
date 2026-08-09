@@ -26,11 +26,12 @@ export const StepCard: React.FC<StepCardProps> = ({
         ease: [0.16, 1, 0.3, 1] 
       }}
       onClick={onSelect}
-      className={`group relative w-full bg-[#08080C] rounded-xl overflow-hidden cursor-pointer transition-all duration-500 border ${
+      className={`group relative w-full bg-[#08080C] rounded-none overflow-hidden cursor-pointer transition-all duration-500 border ${
         isSelected 
           ? 'border-[#C9A44C] shadow-[0_0_30px_rgba(201,164,76,0.25)] bg-[#0C0C12]' 
           : 'border-[#8F6D25]/60 hover:border-[#C9A44C] hover:shadow-[0_0_20px_rgba(201,164,76,0.18)]'
       }`}
+      style={{ clipPath: 'polygon(5% 0, 100% 0%, 95% 100%, 0% 100%)' }}
     >
       <div className="flex flex-col sm:flex-row h-full min-h-[145px] sm:min-h-[160px] lg:min-h-[170px]">
         

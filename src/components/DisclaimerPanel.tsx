@@ -9,7 +9,8 @@ export const DisclaimerPanel: React.FC = () => {
       initial={{ opacity: 0, y: 20 }}
       animate={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.7, delay: 0.5, ease: 'easeOut' }}
-      className="w-full relative overflow-hidden rounded-xl md:rounded-2xl bg-gradient-to-r from-[#0C0B08] via-[#080808] to-[#0A0A0A] border border-[#C9A44C]/40 p-5 md:p-6 shadow-[0_10px_30px_rgba(0,0,0,0.9)] select-none"
+      className="w-full relative overflow-hidden rounded-none bg-gradient-to-r from-[#0C0B08] via-[#080808] to-[#0A0A0A] border border-[#C9A44C]/40 px-10 sm:px-16 py-6 md:py-8 shadow-[0_10px_30px_rgba(0,0,0,0.9)] select-none"
+      style={{ clipPath: 'polygon(20px 0, calc(100% - 20px) 0, 100% 20px, 100% calc(100% - 20px), calc(100% - 20px) 100%, 20px 100%, 0 calc(100% - 20px), 0 20px)' }}
     >
       {/* SUBTLE BACKGROUND GOLD GLOW AMBIENCE */}
       <div className="absolute -bottom-10 left-1/4 w-72 h-32 bg-[#C9A44C]/10 rounded-full blur-3xl pointer-events-none" />

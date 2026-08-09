@@ -63,34 +63,7 @@ export const HowItWorksSection: React.FC = () => {
 
         </div>
 
-        {/* Bottom Interactive Step Progress Indicator */}
-        <motion.div 
-          initial={{ opacity: 0, y: 10 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ delay: 0.8 }}
-          className="mt-12 pt-6 border-t border-[#8F6D25]/30 flex flex-wrap items-center justify-between text-xs sm:text-sm text-[#BDBDBD] gap-4"
-        >
-          <div className="flex items-center space-x-3">
-            <span className="w-2 h-2 rounded-full bg-[#C9A44C] animate-pulse" />
-            <span className="uppercase tracking-widest font-mono text-[#C9A44C]">
-              STEP {activeStepId} OF 04 SELECTED
-            </span>
-          </div>
 
-          <div className="flex items-center space-x-6 font-mono text-xs text-gray-400">
-            {STEPS_DATA.map((s) => (
-              <button
-                key={s.id}
-                onClick={() => setActiveStepId(s.id)}
-                className={`transition-all duration-300 hover:text-[#C9A44C] cursor-pointer ${
-                  activeStepId === s.id ? 'text-[#C9A44C] font-bold underline underline-offset-4' : ''
-                }`}
-              >
-                {s.id}. {s.title.split(' ')[0]}
-              </button>
-            ))}
-          </div>
-        </motion.div>
 
       </div>
 

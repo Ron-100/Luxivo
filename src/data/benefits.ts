@@ -33,7 +33,7 @@ export const BENEFIT_ITEMS: BenefitItem[] = [
     id: 'benefit-05',
     number: '05',
     title: 'TRANSPARENT\nPRICING',
-    description: 'No hidden charges. What you see\nis what you pay—clear and honest.',
+    description: 'No hidden charges. What you see\nis what you pay-clear and honest.',
     iconType: 'shield-dollar',
   },
   {

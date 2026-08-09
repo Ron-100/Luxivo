@@ -57,7 +57,7 @@ export function OccasionsSection() {
       {/* Main Container */}
       <div className="relative w-full max-w-[1440px] mx-auto px-4 sm:px-6 md:px-10 lg:px-14 z-10">
         
-        {/* TOP LABEL: "02. PERFECT FOR EVERY OCCASION —" */}
+        {/* TOP LABEL: "02. PERFECT FOR EVERY OCCASION -" */}
         <HeaderLabel />
 
         {/* HERO AREA: Headline Left, Black Supercar & Speedometer Right */}

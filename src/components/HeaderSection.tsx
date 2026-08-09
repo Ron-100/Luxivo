@@ -45,7 +45,7 @@ export const HeaderSection: React.FC = () => {
         initial={{ opacity: 0, y: 15 }}
         animate={{ opacity: 1, y: 0 }}
         transition={{ duration: 0.6, delay: 0.3, ease: [0.16, 1, 0.3, 1] }}
-        className="text-[#BDBDBD] text-base sm:text-lg leading-relaxed font-normal max-w-[450px]"
+        className="text-[#BDBDBD] text-base sm:text-lg  leading-relaxed font-normal max-w-[450px]"
       >
         We've made the luxury car rental process smooth, fast, and completely hassle-free.
       </motion.p>

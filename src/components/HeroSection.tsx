@@ -35,11 +35,11 @@ export default function HeroSection() {
 
           {/* Luxury Legal Rental Badges */}
           <div className="mt-6 sm:mt-8 flex flex-wrap items-center gap-2.5 sm:gap-4 text-[11px] sm:text-xs font-mono text-gray-400">
-            <div className="flex items-center space-x-2 bg-white/5 border border-[#C9A44C]/30 px-3 py-1.5 rounded-full">
-              <span className="w-2 h-2 rounded-full bg-[#C9A44C] animate-pulse shadow-[0_0_8px_#C9A44C]" />
+            <div className="flex items-center space-x-2 bg-white/5 border border-[#C9A44C]/30 px-3 py-1.5">
+              <span className="w-2 h-2 rounded-full bg-[#C9A44C]" />
               <span className="text-white">100% Fully Insured Fleet</span>
             </div>
-            <div className="flex items-center space-x-2 bg-white/5 border border-[#C9A44C]/30 px-3 py-1.5 rounded-full">
+            <div className="flex items-center space-x-2 bg-white/5 border border-[#C9A44C]/30 px-3 py-1.5">
               <span className="text-[#DFB756]">★</span>
               <span className="text-gray-300">White-Glove Concierge</span>
             </div>
@@ -90,10 +90,13 @@ export default function HeroSection() {
             <motion.div
               initial={{ opacity: 0 }}
               animate={{ opacity: carHovered ? 1 : 0 }}
-              className="absolute bottom-1 sm:bottom-2 right-2 sm:right-4 z-20 bg-black/80 backdrop-blur-md border border-[#C9A44C]/60 rounded-lg px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-mono text-white flex items-center space-x-1.5 sm:space-x-2 shadow-[0_0_20px_rgba(201,164,76,0.5)] pointer-events-none"
+              className="absolute bottom-1 sm:bottom-2 right-2 sm:right-4 z-20 backdrop-blur-md px-2.5 sm:px-3 py-1 sm:py-1.5 text-[10px] sm:text-[11px] font-mono text-white flex items-center space-x-1.5 sm:space-x-2 pointer-events-none"
+              style={{
+                background: 'linear-gradient(180deg, rgba(255, 255, 255, 1) 0%, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.47) 100%)',
+              }}
             >
               <Sparkles className="w-3 sm:w-3.5 h-3 sm:h-3.5 text-[#DFB756]" />
-              <span>AUDI R8 V10 PERFORMANCE — 610 HP</span>
+              <span>AUDI R8 V10 PERFORMANCE - 610 HP</span>
             </motion.div>
           </div>
         </motion.div>

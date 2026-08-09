@@ -70,7 +70,7 @@ export function LegalVerificationSection() {
           </div>
 
           {/* RIGHT COLUMN: INTERACTIVE LEGAL SHOWROOM OVERLAY & HOTSPOTS */}
-          <div className="lg:col-span-7 w-full h-full flex flex-col justify-center my-auto">
+          <div className="lg:col-span-7 w-full h-full flex flex-col justify-center my-auto ml-0 lg:ml-8 xl:ml-[70px]">
             <LegalShowroomVisual
               onOpenAgreementModal={() => setIsAgreementModalOpen(true)}
               onOpenVerificationModal={handleOpenVerificationType}

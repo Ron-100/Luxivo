@@ -9,6 +9,10 @@
     user-select: none;
     -webkit-font-smoothing: antialiased;
   }
+
+  .font-mono {
+    font-family: "Satoshi", "Geist", system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif !important;
+  }
 }
 
 /* Custom scrollbar */

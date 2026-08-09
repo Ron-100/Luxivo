@@ -57,7 +57,7 @@ export const WhyChooseUs: React.FC = () => {
                 transition={{ duration: 0.6, delay: 0.2 }}
                 className="text-[#C4C4C4] text-sm sm:text-base xl:text-[17px] font-medium leading-relaxed max-w-[450px] mb-4 whitespace-pre-line"
               >
-                We deliver more than premium vehicles—{"\n"}
+                We deliver more than premium vehicles-{"\n"}
                 we provide a seamless luxury experience{"\n"}
                 from booking to drop-off.
               </motion.p>

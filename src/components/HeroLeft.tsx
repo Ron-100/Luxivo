@@ -22,7 +22,7 @@ export const HeroLeft: React.FC<HeroLeftProps> = ({ onGetStarted }) => {
 
       {/* Subtitle Paragraph */}
       <p className="mt-6 sm:mt-8 lg:mt-9 text-neutral-400 text-sm sm:text-base lg:text-[17px] leading-[1.38] max-w-sm font-normal tracking-wide">
-        From weddings and film productions to VIP events and exclusive celebrations, we provide premium luxury vehicles for legal rental—delivering elegance, prestige, and unforgettable experiences.
+        From weddings and film productions to VIP events and exclusive celebrations, we provide premium luxury vehicles for legal rental-delivering elegance, prestige, and unforgettable experiences.
       </p>
 
       {/* Get Started Button */}
