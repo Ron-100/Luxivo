@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import { motion, AnimatePresence } from 'motion/react';
 import { LUXURY_CARS } from '../data/benefits';
 import { LuxuryCar } from '../types';
-import showroomImagePath from '../assets/images/luxury_showroom_cars_1786196157817.jpg';
+import showroomImagePath from '../assets/images/luxury_showroom_cars_1786196157817.webp';
 
 export const ShowroomScene: React.FC = () => {
   const [selectedCar, setSelectedCar] = useState<LuxuryCar | null>(null);

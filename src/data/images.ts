@@ -1,5 +1,5 @@
-import bugattiImg from '../assets/images/bugatti_chiron_new_1785952595676.jpg';
-import dodgeImg from '../assets/images/dodge_demon_hero_1785951958666.jpg';
+import bugattiImg from '../assets/images/bugatti_chiron_new_1785952595676.webp';
+import dodgeImg from '../assets/images/dodge_demon_hero_1785951958666.webp';
 import { ImagePair } from '../types';
 
 export const DEFAULT_SUPERCAR_PAIR: ImagePair = {

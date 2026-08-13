@@ -13,7 +13,7 @@ import {
 } from 'lucide-react';
 import { INTERACTIVE_HOTSPOTS } from '../data/legalData';
 import { Hotspot } from '../types';
-import showroomImg from '../assets/images/luxury_legal_showroom_1786198275201.jpg';
+import showroomImg from '../assets/images/luxury_legal_showroom_1786198275201.webp';
 
 interface LegalShowroomVisualProps {
   onOpenAgreementModal: () => void;

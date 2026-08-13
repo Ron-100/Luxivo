@@ -1,10 +1,10 @@
 import { OccasionItem } from '../types';
 
-import weddingImg from '../assets/images/wedding_car_1786193230860.jpg';
-import filmImg from '../assets/images/film_shoot_car_1786193244491.jpg';
-import vipImg from '../assets/images/vip_event_car_1786193260613.jpg';
-import photoshootImg from '../assets/images/photoshoot_car_1786193274496.jpg';
-import specialImg from '../assets/images/special_occasion_car_1786193291427.jpg';
+import weddingImg from '../assets/images/wedding_car_1786193230860.webp';
+import filmImg from '../assets/images/film_shoot_car_1786193244491.webp';
+import vipImg from '../assets/images/vip_event_car_1786193260613.webp';
+import photoshootImg from '../assets/images/photoshoot_car_1786193274496.webp';
+import specialImg from '../assets/images/special_occasion_car_1786193291427.webp';
 
 export const OCCASIONS: OccasionItem[] = [
   {

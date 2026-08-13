@@ -1,10 +1,10 @@
 import { Hypercar } from '../types';
 
-import bugattiImg from '../assets/images/bugatti_chiron_studio_1786115418435.jpg';
-import rollsImg from '../assets/images/rolls_royce_spectre_1786115434116.jpg';
-import lamboImg from '../assets/images/lamborghini_revuelto_1786115448300.jpg';
-import ferrariImg from '../assets/images/ferrari_sf90_studio_1786115464080.jpg';
-import koenigseggImg from '../assets/images/koenigsegg_jesko_studio_1786115480519.jpg';
+import bugattiImg from '../assets/images/bugatti_chiron_studio_1786115418435.webp';
+import rollsImg from '../assets/images/rolls_royce_spectre_1786115434116.webp';
+import lamboImg from '../assets/images/lamborghini_revuelto_1786115448300.webp';
+import ferrariImg from '../assets/images/ferrari_sf90_studio_1786115464080.webp';
+import koenigseggImg from '../assets/images/koenigsegg_jesko_studio_1786115480519.webp';
 
 export const HYPERCARS: Hypercar[] = [
   {

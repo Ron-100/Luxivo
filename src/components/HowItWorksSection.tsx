@@ -4,7 +4,7 @@ import { HeaderSection } from './HeaderSection';
 import { VehicleShowroom } from './VehicleShowroom';
 import { StepCard } from './StepCard';
 import { STEPS_DATA } from '../data/steps';
-import showroomImg from '../assets/images/hero_car_showroom_1786197222479.jpg';
+import showroomImg from '../assets/images/hero_car_showroom_1786197222479.webp';
 
 export const HowItWorksSection: React.FC = () => {
   const [activeStepId, setActiveStepId] = useState<string>('01');

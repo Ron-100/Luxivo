@@ -1,8 +1,8 @@
-import heroCarImg from '../assets/images/hero_car_showroom_1786197222479.jpg';
-import step1Img from '../assets/images/step1_showroom_1786197240174.jpg';
-import step2Img from '../assets/images/step2_calendar_1786197254555.jpg';
-import step3Img from '../assets/images/step3_verification_1786197268876.jpg';
-import step4Img from '../assets/images/step4_chauffeur_1786197288475.jpg';
+import heroCarImg from '../assets/images/hero_car_showroom_1786197222479.webp';
+import step1Img from '../assets/images/step1_showroom_1786197240174.webp';
+import step2Img from '../assets/images/step2_calendar_1786197254555.webp';
+import step3Img from '../assets/images/step3_verification_1786197268876.webp';
+import step4Img from '../assets/images/step4_chauffeur_1786197288475.webp';
 import { StepItem } from '../types';
 
 export const HERO_CAR_IMAGE = heroCarImg;

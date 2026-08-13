@@ -3,7 +3,7 @@ import { motion } from 'motion/react';
 import { Calendar, Sparkles } from 'lucide-react';
 import { FleetModal } from './FleetModal';
 import { BookingModal } from './BookingModal';
-import bgImage from '../assets/images/luxury_car_cta_bg_1786199208802.jpg';
+import bgImage from '../assets/images/luxury_car_cta_bg_1786199208802.webp';
 
 // Custom SVG Car Outline Icon matching the reference image button 1
 const CarOutlineIcon = ({ className = "w-5 h-5" }: { className?: string }) => (

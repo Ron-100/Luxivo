@@ -7,7 +7,7 @@ import { AgreementModal } from './AgreementModal';
 import { VerificationModal } from './VerificationModal';
 import { FEATURE_ITEMS } from '../data/legalData';
 import { FeatureItem } from '../types';
-import showroomImg from '../assets/images/luxury_legal_showroom_1786198275201.jpg';
+import showroomImg from '../assets/images/luxury_legal_showroom_1786198275201.webp';
 
 export function LegalVerificationSection() {
   const [selectedFeature, setSelectedFeature] = useState<FeatureItem | null>(null);
